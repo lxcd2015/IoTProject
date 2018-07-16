@@ -1,0 +1,26 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "IoTProject API",
+        "description": "物联网项目接口文档",
+        "version": "1.0.0",
+        "contact": {}
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/test/GetData": {
+            "get": {
+                "tags": [
+                    "test"
+                ],
+                "description": "获取测试用数据",
+                "operationId": "TestController.获取数据",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        }
+    }
+}
