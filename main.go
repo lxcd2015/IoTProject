@@ -2,15 +2,11 @@ package main
 
 import (
 	_ "IoTProject/routers"
+	_ "IoTProject/startup"
 
 	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql"
 )
-
-func init() {
-	orm.RegisterDataBase("default", "mysql", "root:@tcp(127.0.0.1:3306)/IoTProject")
-}
 
 func main() {
 	if beego.BConfig.RunMode == "dev" {
@@ -19,4 +15,3 @@ func main() {
 	}
 	beego.Run()
 }
-
