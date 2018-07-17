@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	. "IoTProject/startup"
+
 	"github.com/astaxie/beego"
 )
 
@@ -14,6 +16,8 @@ type TestController struct {
 // @router /GetData [get]
 func (u *TestController) GetData() {
 	u.Data["json"] = "测试数据2018"
+	IoTLog.Error("Error0717\r")
+	u.Abort("500")
 	// u.Data["json"] = u.Data["json"] + "2018年7月15日，测试成功"
 	u.ServeJSON()
 }
