@@ -13,7 +13,10 @@ func init() {
 	orm.RegisterDataBase("default", "mysql", beego.AppConfig.String("ConnectionStrings"))
 
 	// register model
-	orm.RegisterModel(new(TestModel))
+	orm.RegisterModel(new(EquipmentResources))
+	orm.RegisterModel(new(Functions))
+	orm.RegisterModel(new(Total))
+	orm.RegisterModel(new(Type))
 
 	// create table
 	orm.RunSyncdb("default", false, true)
